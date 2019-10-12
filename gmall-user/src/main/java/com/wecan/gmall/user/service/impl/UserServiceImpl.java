@@ -1,8 +1,9 @@
 package com.wecan.gmall.user.service.impl;
 
-import com.wecan.gmall.user.bean.UmsMember;
+
+import com.wecan.gmall.bean.UmsMember;
+import com.wecan.gmall.service.UserService;
 import com.wecan.gmall.user.mapper.UmsMemberMapper;
-import com.wecan.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ public class UserServiceImpl implements UserService {
     UmsMemberMapper umsMemberMapper;
     @Override
     public List<UmsMember> getAllUser() {
-        List<UmsMember> users=umsMemberMapper.selectAllUser();
+        List<UmsMember> users=umsMemberMapper.selectAll();
         return users;
     }
 }
